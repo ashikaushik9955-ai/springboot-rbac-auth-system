@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.dto.RegisterRequestDTO;
 import com.example.demo.dto.LoginRequestDTO;
+
 import com.example.demo.repository.RoleRepository;
 import com.example.demo.model.Role;
 import com.example.demo.model.User;
@@ -9,6 +10,7 @@ import com.example.demo.repository.UserRepository;
 import com.example.demo.security.JwtUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -129,6 +131,10 @@ return token;
 }
 
 
+
+
+
+
 public String approveTeacher(Long id) {
 
     User user = userRepository.findById(id)
@@ -150,7 +156,7 @@ public String approveTeacher(Long id) {
 
     userRepository.save(user);
 
-    return "Teacher Approved Successfully 😎";
+    return "Teacher Approved Successfully 😎"; 
 }
     
 }

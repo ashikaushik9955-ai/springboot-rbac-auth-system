@@ -28,11 +28,12 @@ public class Securityconfig {
                 .csrf(csrf -> csrf.disable())
 
                 .authorizeHttpRequests(auth -> auth
-
+                        
         // Public APIs
         .requestMatchers(
                 "/auth/register",
-                "/auth/login"
+                "/auth/login",
+                "/auth/test"
         ).permitAll()
 
         // Student API
@@ -46,6 +47,8 @@ public class Securityconfig {
         // Admin API
         .requestMatchers("/auth/admin/**")
         .hasAuthority("ROLE_ADMIN")
+        
+        
 
         // Everything else protected
         .anyRequest().authenticated()
