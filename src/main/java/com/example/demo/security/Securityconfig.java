@@ -33,7 +33,10 @@ public class Securityconfig {
         .requestMatchers(
                 "/auth/register",
                 "/auth/login",
-                "/auth/test"
+                "/auth/test",
+                // Swagger
+               "/swagger-ui/**",
+               "/v3/api-docs/**"
         ).permitAll()
 
         // Student API
