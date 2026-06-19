@@ -28,6 +28,13 @@ This project demonstrates secure login, JWT token generation, role-based access 
 * Hibernate
 * MySQL
 * Maven
+* Swagger OpenAPI
+* Git & GitHub
+
+API Documentation
+Swagger UI
+
+
 
 ## Project Workflow
 
@@ -99,9 +106,9 @@ PUT /auth/admin/approve-teacher/{id}
 * Refresh Token Implementation
 * Email Verification
 * Forgot Password Feature
-* Swagger API Documentation
 * Docker Deployment
 
 ## Author
+ASHI KAUSHIK
 
 Ashi Kaushik
