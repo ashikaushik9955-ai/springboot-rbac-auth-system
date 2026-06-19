@@ -16,6 +16,7 @@ This project demonstrates secure login, JWT token generation, role-based access 
 * Teacher Approval Workflow (Admin-controlled)
 * Protected APIs using JWT Filter
 * Stateless Authentication using Spring Security
+* Swagger API Documentation
 
 ## Tech Stack
 
