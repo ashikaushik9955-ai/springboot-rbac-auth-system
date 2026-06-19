@@ -109,6 +109,6 @@ PUT /auth/admin/approve-teacher/{id}
 * Docker Deployment
 
 ## Author
-ASHI KAUSHIK
+
 
 Ashi Kaushik
