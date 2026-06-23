@@ -17,6 +17,7 @@ This project demonstrates secure login, JWT token generation, role-based access 
 * Protected APIs using JWT Filter
 * Stateless Authentication using Spring Security
 * Swagger API Documentation
+* Dockerized deployment
 
 ## Tech Stack
 
@@ -30,6 +31,7 @@ This project demonstrates secure login, JWT token generation, role-based access 
 * Maven
 * Swagger OpenAPI
 * Git & GitHub
+* Docker
 
 API Documentation
 Swagger UI
@@ -93,6 +95,68 @@ GET /auth/admin
 
 PUT /auth/admin/approve-teacher/{id}
 
+
+
+## Local Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/ashikaushik9955-ai/springboot-rbac-auth-system.git
+cd springboot-rbac-auth-system
+```
+
+### 2. Configure MySQL database
+
+Create a MySQL database named:
+
+```sql
+student_platform
+```
+
+Update `application.properties` if needed:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/student_platform
+spring.datasource.username=root
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+```
+
+### 3. Run the project
+
+```bash
+mvn spring-boot:run
+```
+
+---
+
+## Docker Setup
+
+### 1. Build Docker image
+
+```bash
+docker build -t springboot-rbac-auth .
+```
+
+### 2. Run Docker container
+
+```bash
+docker run -d -p 8080:8080 --name rbac-test springboot-rbac-auth
+```
+
+### Note for Docker + Local MySQL
+
+If you are running MySQL on your local machine (for example via XAMPP), the datasource URL may need to be changed to:
+
+```properties
+spring.datasource.url=jdbc:mysql://host.docker.internal:3306/student_platform
+```
+
+This allows the Docker container to connect to MySQL running on the host machine.
+
+
+
 ## Security Features
 
 * JWT Token Validation
@@ -106,7 +170,7 @@ PUT /auth/admin/approve-teacher/{id}
 * Refresh Token Implementation
 * Email Verification
 * Forgot Password Feature
-* Docker Deployment
+  
 
 ## Author
 
