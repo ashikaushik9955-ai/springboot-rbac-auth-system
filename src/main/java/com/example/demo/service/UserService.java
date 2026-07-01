@@ -115,7 +115,8 @@ if (user.getRoles().stream()
 }
 
     
-    //ROLE EXTRACTION
+    //ROLE EXTRACTION - TODO: Future enhancement - Generate JWT with all user roles instead of first role only.
+    
     String role = user.getRoles()
         .stream()
         .findFirst()
