@@ -7,9 +7,10 @@ import com.example.demo.repository.UserRepository;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Component;
+//import org.springframework.stereotype.Component;
 
-@Component
+//@Component
+// Temporarily disabled while investigating Render startup issue.
 public class RoleSeeder implements CommandLineRunner {
 
     private final RoleRepository roleRepository;
